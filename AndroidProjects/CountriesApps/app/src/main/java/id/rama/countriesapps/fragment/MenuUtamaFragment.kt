@@ -17,6 +17,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.rama.countriesapps.R
+import id.rama.countriesapps.adapter.AdapterBottomSheet
 import id.rama.countriesapps.adapter.AdapterCountries
 import id.rama.countriesapps.factory.FactoryCountries
 import id.rama.countriesapps.model.ModelCountries
@@ -47,8 +48,26 @@ class MenuUtamaFragment : Fragment(),  AdapterCountries.CountriesClickListener{
         setupRecyclerView()
         getDataCountries(nameRegion)
         searchDataCountries()
+        filterDataCountries()
         img_detail_filter_flag_categories.setImageResource(imageRegion)
 
+      activity?.onBackPressedDispatcher?.addCallback(requireActivity(),object :OnBackPressedCallback(true){
+          override fun handleOnBackPressed() {
+              navController.navigate(R.id.action_menuUtamaFragment_to_regionalFragment)
+              this.remove()
+          }
+
+
+      })
+
+    }
+
+    private fun filterDataCountries() {
+        btn_filter_countries.setOnClickListener {
+            val bottomSheet = AdapterBottomSheet()
+            bottomSheet.show(requireActivity().supportFragmentManager,"BottomSheet")
+            Toast.makeText(requireContext(), "Maaf fitur filter dialihkan ke\nmenu sebelumnya", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setupRecyclerView() {
@@ -67,6 +86,7 @@ class MenuUtamaFragment : Fragment(),  AdapterCountries.CountriesClickListener{
         ).get(ViewModelCountries::class.java)
         viewModelCountries.getListCountries(data)
         viewModelCountries.responseCountries.observe(requireActivity(), Observer { response ->
+
             if (response.isSuccessful) {
                 response.body()?.let { adapterCountries.setData(it) }
             }

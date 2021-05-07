@@ -33,6 +33,12 @@ class RegionalFragment : Fragment(), AdapterFilterCountries.FilterClickListener 
         navController = Navigation.findNavController(view)
         getListRegional()
 
+        activity?.onBackPressedDispatcher?.addCallback(requireActivity(), object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                requireActivity().finish()
+            }
+
+        })
 
     }
 

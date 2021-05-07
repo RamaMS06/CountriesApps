@@ -15,7 +15,11 @@
     <string name="silahkan_pilih">Silahkan pilih</string>
     <string name="benua_favorit_anda">Benua favorit anda!</string>
     <string name="populasi">Populasi</string>
-    <string name="asia">ASIA</string>
+    <string name="asia">Asia</string>
     <string name="bahasa_indonesia">Bahasa Indonesia</string>
     <string name="total_populasi">Total Populasi</string>
+    <string name="africa">Africa</string>
+    <string name="americas">Americas</string>
+    <string name="europe">Europe</string>
+    <string name="oceania">Oceania</string>
 </resources>
