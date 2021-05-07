@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="id.rama.countriesapps.fragment.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_regionalFragment"
+            app:destination="@id/regionalFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/regionalFragment"
+        android:name="id.rama.countriesapps.fragment.RegionalFragment"
+        android:label="fragment_regional"
+        tools:layout="@layout/fragment_regional" >
+        <action
+            android:id="@+id/action_regionalFragment_to_menuUtamaFragment"
+            app:destination="@id/menuUtamaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument android:name="regionName"/>
+    </fragment>
+    <fragment
+        android:id="@+id/menuUtamaFragment"
+        android:name="id.rama.countriesapps.fragment.MenuUtamaFragment"
+        android:label="fragment_menu_utama"
+        tools:layout="@layout/fragment_menu_utama" >
+        <action
+            android:id="@+id/action_menuUtamaFragment_to_detailCountriesFragment"
+            app:destination="@id/detailCountriesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/detailCountriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCountriesFragment"
+        android:name="id.rama.countriesapps.fragment.DetailCountriesFragment"
+        android:label="fragment_detail_countries"
+        tools:layout="@layout/fragment_detail_countries">
+        <action
+            android:id="@+id/action_detailCountriesFragment_to_regionalFragment"
+            app:destination="@id/regionalFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>

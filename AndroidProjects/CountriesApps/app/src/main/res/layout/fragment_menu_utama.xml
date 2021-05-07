@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".fragment.MenuUtamaFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/hallo"
+                android:textColor="@color/ungu"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/selamat_datang"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="155dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_detail_filter_flag_categories"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="50dp"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_search_view_countries"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_corner_edit_text"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="15dp"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/open_sans"
+            android:hint="@string/cari_negara"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/btn_filter_countries"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:src="@drawable/ic_filter" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_countries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp" />
+
+
+</LinearLayout>

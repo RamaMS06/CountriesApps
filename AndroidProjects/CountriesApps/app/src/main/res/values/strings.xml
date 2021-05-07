@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CountriesApps</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sudahkah_anda_cek">Sudahkah kamu cek</string>
+    <string name="negara">Negara</string>
+    <string name="kamu_disini">kamu disini?</string>
+    <string name="lanjutkan">Lanjutkan</string>
+    <string name="hallo">Hallo,</string>
+    <string name="selamat_datang">Selamat Datang!</string>
+    <string name="cari_negara">Cari negara diseluruh dunia</string>
+    <string name="latitude_longitude">latitude longitude</string>
+    <string name="_10101010">10101010</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="silahkan_pilih">Silahkan pilih</string>
+    <string name="benua_favorit_anda">Benua favorit anda!</string>
+    <string name="populasi">Populasi</string>
+    <string name="asia">ASIA</string>
+    <string name="bahasa_indonesia">Bahasa Indonesia</string>
+    <string name="total_populasi">Total Populasi</string>
+</resources>
